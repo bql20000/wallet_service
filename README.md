@@ -3,8 +3,8 @@
 Demo project to learn Kotlin & Spring Boot: a wallet/ledger backend
 supporting top-ups, wallet-to-wallet transfers, and wallet-to-bank transfers
 (mocked). Full requirements and system design live in
-`docs/wallet-service-design.docx` — this file summarizes it so day-to-day
-work doesn't require opening the doc.
+[`docs/wallet-service-design.md`](docs/wallet-service-design.md) — this file
+summarizes it so day-to-day work doesn't require opening the full doc.
 
 **Current status:** early scaffold only (default Spring Initializr output — a
 single `WalletServiceApplication.kt` and no domain code yet). Treat everything
@@ -74,18 +74,22 @@ disappears; every movement is an immutable `ledger_entries` row.
 `available_balance` on `wallets` is a cached running total, always updated in
 the same DB transaction as the ledger entry.
 
-- **`wallets`** — `id`, `user_id`, `currency`, `available_balance`
-  (`CHECK >= 0`), `version` (reserved for future optimistic locking),
-  timestamps.
-- **`ledger_entries`** — `id`, `wallet_id`, `entry_type`, `amount`,
-  `balance_after` (snapshot for fast history/corruption checks),
-  `reference_id` (links the two sides of a wallet-to-wallet transfer —
-  `TRANSFER_OUT` + `TRANSFER_IN` share one `reference_id`),
-  `idempotency_key`, with `UNIQUE (wallet_id, idempotency_key)`.
-  Entry types: `TOPUP`, `TRANSFER_OUT`, `TRANSFER_IN`,
-  `BANK_TRANSFER_OUT`, `BANK_TRANSFER_REVERSAL`.
+- **`wallets`** — `id` (`BIGINT` identity, not `UUID`), `user_id`, `name`
+  (display label for the wallet, e.g. "Main Wallet"), `currency`,
+  `available_balance` (`CHECK >= 0`), `version` (reserved for future
+  optimistic locking), timestamps.
+- **`ledger_entries`** — `id` (`BIGINT` identity), `wallet_id` (`BIGINT` FK →
+  `wallets.id`), `entry_type`, `amount`, `balance_after` (snapshot for fast
+  history/corruption checks), `reference_id` (links the two sides of a
+  wallet-to-wallet transfer — `TRANSFER_OUT` + `TRANSFER_IN` share one
+  `reference_id`; this stays a `UUID` since it's a synthetic correlation
+  token, not a foreign key), `idempotency_key`, with
+  `UNIQUE (wallet_id, idempotency_key)`. Entry types: `TOPUP`,
+  `TRANSFER_OUT`, `TRANSFER_IN`, `BANK_TRANSFER_OUT`,
+  `BANK_TRANSFER_REVERSAL`.
 - **`bank_transfer_jobs`** — tracks mock bank transfer state (`PENDING` →
-  `COMPLETED`/`REJECTED`), `UNIQUE (wallet_id, idempotency_key)`.
+  `COMPLETED`/`REJECTED`), `wallet_id` (`BIGINT` FK → `wallets.id`),
+  `UNIQUE (wallet_id, idempotency_key)`.
 
 ## Concurrency: Pessimistic Locking
 
@@ -99,7 +103,7 @@ Spring Data JDBC, this is a repository method with a hand-written
 `@Transactional` service method.
 
 **Deadlock prevention:** wallet-to-wallet transfers lock both wallets in
-ascending UUID order regardless of transfer direction, so two concurrent
+ascending `id` order regardless of transfer direction, so two concurrent
 transfers between the same pair of wallets always acquire locks in the same
 order.
 

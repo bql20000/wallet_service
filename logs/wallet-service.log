@@ -1,0 +1,36 @@
+2026-08-01T01:41:40.067+08:00  INFO 2181 --- [wallet_service] [main] c.e.w.WalletServiceApplicationKt         : Starting WalletServiceApplicationKt using Java 21.0.11 with PID 2181 (/mnt/c/Users/bql20/OneDrive/Documents/KOTLIN/wallet_service/build/classes/kotlin/main started by maxu in /mnt/c/Users/bql20/OneDrive/Documents/KOTLIN/wallet_service)
+2026-08-01T01:41:40.087+08:00  INFO 2181 --- [wallet_service] [main] c.e.w.WalletServiceApplicationKt         : No active profile set, falling back to 1 default profile: "default"
+2026-08-01T01:41:42.030+08:00  INFO 2181 --- [wallet_service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-08-01T01:41:42.221+08:00  INFO 2181 --- [wallet_service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 174 ms. Found 2 JDBC repository interfaces.
+2026-08-01T01:41:43.438+08:00  INFO 2181 --- [wallet_service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-01T01:41:43.471+08:00  INFO 2181 --- [wallet_service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-01T01:41:43.472+08:00  INFO 2181 --- [wallet_service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-01T01:41:43.563+08:00  INFO 2181 --- [wallet_service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3360 ms
+2026-08-01T01:41:45.568+08:00  INFO 2181 --- [wallet_service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-01T01:41:46.402+08:00  INFO 2181 --- [wallet_service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:walletdb user=SA
+2026-08-01T01:41:46.410+08:00  INFO 2181 --- [wallet_service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-01T01:41:48.932+08:00  INFO 2181 --- [wallet_service] [main] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:walletdb'
+2026-08-01T01:41:48.981+08:00  INFO 2181 --- [wallet_service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-01T01:41:48.985+08:00  INFO 2181 --- [wallet_service] [main] c.e.w.WalletServiceApplicationKt         : Started WalletServiceApplicationKt in 10.337 seconds (process running for 11.108)
+2026-08-01T01:49:47.367+08:00  INFO 2181 --- [wallet_service] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-01T01:49:47.374+08:00  INFO 2181 --- [wallet_service] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-01T01:49:47.379+08:00  INFO 2181 --- [wallet_service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-01T01:49:47.381+08:00  INFO 2181 --- [wallet_service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-01T01:49:59.273+08:00  INFO 2529 --- [wallet_service] [main] c.e.w.WalletServiceApplicationKt         : Starting WalletServiceApplicationKt using Java 21.0.11 with PID 2529 (/mnt/c/Users/bql20/OneDrive/Documents/KOTLIN/wallet_service/build/classes/kotlin/main started by maxu in /mnt/c/Users/bql20/OneDrive/Documents/KOTLIN/wallet_service)
+2026-08-01T01:49:59.281+08:00  INFO 2529 --- [wallet_service] [main] c.e.w.WalletServiceApplicationKt         : No active profile set, falling back to 1 default profile: "default"
+2026-08-01T01:50:01.056+08:00  INFO 2529 --- [wallet_service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-08-01T01:50:01.246+08:00  INFO 2529 --- [wallet_service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 173 ms. Found 2 JDBC repository interfaces.
+2026-08-01T01:50:02.389+08:00  INFO 2529 --- [wallet_service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-01T01:50:02.423+08:00  INFO 2529 --- [wallet_service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-01T01:50:02.424+08:00  INFO 2529 --- [wallet_service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-01T01:50:02.516+08:00  INFO 2529 --- [wallet_service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3118 ms
+2026-08-01T01:50:04.427+08:00  INFO 2529 --- [wallet_service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-01T01:50:05.214+08:00  INFO 2529 --- [wallet_service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:walletdb user=SA
+2026-08-01T01:50:05.221+08:00  INFO 2529 --- [wallet_service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-01T01:50:07.800+08:00  INFO 2529 --- [wallet_service] [main] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:walletdb'
+2026-08-01T01:50:07.847+08:00  INFO 2529 --- [wallet_service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-01T01:50:07.853+08:00  INFO 2529 --- [wallet_service] [main] c.e.w.WalletServiceApplicationKt         : Started WalletServiceApplicationKt in 9.888 seconds (process running for 10.767)
+2026-08-01T01:52:42.821+08:00  INFO 2529 --- [wallet_service] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-01T01:52:42.822+08:00  INFO 2529 --- [wallet_service] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-01T01:52:42.823+08:00  INFO 2529 --- [wallet_service] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-08-01T01:52:44.026+08:00  INFO 2529 --- [wallet_service] [http-nio-8080-exec-2] c.e.w.service.WalletService              : create_wallet|username=Long,user_id=1,wallet_name=wallet_1,wallet_id=1

@@ -5,9 +5,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project overview
 
 Kotlin + Spring Boot wallet/ledger backend (learning project). The full
-requirements and system design live in `README.md` (originally authored in
-`docs/wallet-service-design.docx`) — read it before implementing any domain
-logic. It encodes deliberate, already-decided architectural choices (double-entry
+requirements and system design live in `docs/wallet-service-design.md`, with a
+condensed summary in `README.md` — read one of them before implementing any
+domain logic. It encodes deliberate, already-decided architectural choices (double-entry
 ledger, pessimistic locking, DB-constraint-based idempotency, Spring Data JDBC
 over JPA) rather than open design space, so don't re-derive or second-guess
 them without reason.
