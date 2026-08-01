@@ -41,3 +41,6 @@ out/
 
 ### Claude Code (local, per-machine settings)
 .claude/settings.local.json
+
+### Runtime logs (logging.file.name in application.properties)
+logs/
