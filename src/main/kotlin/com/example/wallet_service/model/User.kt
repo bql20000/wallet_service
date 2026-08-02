@@ -3,7 +3,7 @@ package com.example.wallet_service.model
 import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Table
 
-@Table("USERS")
+@Table("user_tab")
 data class User(
     @Id
     var id: Long? = null,
